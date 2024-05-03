@@ -81,7 +81,6 @@
                 <td>customer</td>
             </tr>                
             {/each}
-
         </tbody>
       </table>
     {/if}

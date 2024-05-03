@@ -12,8 +12,6 @@ let payload = {
     customer_id: 2,
 }
 
-let searchInput = ""
-
 const handleSubmit = (e) => {
 e.preventDefault()
 createNewAnimal(payload).then(()=>{
@@ -27,7 +25,6 @@ createNewAnimal(payload).then(()=>{
 <button type="button" on:click={backButton}>
     Back
 </button>
-<input type="text" bind:value={searchInput}>
 <form on:submit={handleSubmit}>
     <input type="text" name="name" bind:value={payload.name} placeholder="name" >
     <input type="text" name="breed" bind:value={payload.breed} placeholder="breed">
