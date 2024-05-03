@@ -15,7 +15,6 @@
         getAllAnimals().then((data)=>{
             animalsOg = data
             animals = data
-            console.log(animals)
         })
     })
     
@@ -43,7 +42,7 @@
     animals = animalsOg.filter(item =>
         item.name.toLowerCase().includes(searchInput.toLowerCase()) ||
         item.breed.toLowerCase().includes(searchInput.toLowerCase())
-);
+    );
     }else {
         animals = animalsOg
     }

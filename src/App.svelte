@@ -1,12 +1,28 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-    import Animals from './components/Animals.svelte';
+// @ts-nocheck
+
+  import Animals from './components/Animals.svelte';
+  import { Router, Route } from "svelte-routing";
+  import Home from './components/Home.svelte';
 </script>
 
 <main>
-<Animals/>
+  <nav>
+    <ul>
+      <li><strong>Nasvhille Kennels</strong></li>
+    </ul>
+    <ul>
+      <li><a href="animals">Animals</a></li>
+      <li><a href="locations">Locations</a></li>
+    </ul>
+  </nav>
+  <Router>
+    <div>
+      <Route path="/"><Home /></Route>
+      <Route path="/animals/"><Animals /></Route>
+      <Route path="/locations"><Home /></Route>
+    </div>
+  </Router>
 </main>
 
 <style>
